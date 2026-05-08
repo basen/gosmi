@@ -3,7 +3,7 @@ package parser
 import (
 	"github.com/alecthomas/participle/lexer"
 
-	"github.com/basen/gosmi/types"
+	"github.com/sleepinggenius2/gosmi/types"
 )
 
 type TextualConvention struct {

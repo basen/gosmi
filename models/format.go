@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/basen/gosmi/types"
+	"github.com/sleepinggenius2/gosmi/types"
 )
 
 type Format byte

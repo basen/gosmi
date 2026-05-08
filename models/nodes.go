@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/basen/gosmi/types"
+	"github.com/sleepinggenius2/gosmi/types"
 )
 
 type BaseNode struct {

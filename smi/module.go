@@ -5,8 +5,8 @@ import (
 	"os"
 	"unsafe"
 
-	"github.com/basen/gosmi/smi/internal"
-	"github.com/basen/gosmi/types"
+	"github.com/sleepinggenius2/gosmi/smi/internal"
+	"github.com/sleepinggenius2/gosmi/types"
 )
 
 // char *smiLoadModule(const char *module)

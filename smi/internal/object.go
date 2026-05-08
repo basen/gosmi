@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/basen/gosmi/parser"
-	"github.com/basen/gosmi/types"
+	"github.com/sleepinggenius2/gosmi/parser"
+	"github.com/sleepinggenius2/gosmi/types"
 )
 
 type Option struct {
