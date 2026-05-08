@@ -30,7 +30,7 @@ const (
 	AccessWriteOnly           Access = "write-only" // Do not use
 	AccessNotImplemented      Access = "not-implemented"
 	AccessNotAccessible       Access = "not-accessible"
-	AccessAccessibleForNotify Access = "accesible-for-notify"
+	AccessAccessibleForNotify Access = "accessible-for-notify"
 	AccessReadOnly            Access = "read-only"
 	AccessReadWrite           Access = "read-write"
 	AccessReadCreate          Access = "read-create"

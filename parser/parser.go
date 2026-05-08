@@ -36,14 +36,17 @@ var (
 		alpha = lower | upper .
 		digit = "0"…"9" .
 	`))
-	compressSpace = regexp.MustCompile(`(?:\r?\n *)+`)
-	smiParser     = participle.MustBuild(new(Module),
+	normalizeTextNewlines = regexp.MustCompile(`\r?\n *`)
+	smiParser             = participle.MustBuild(new(Module),
 		participle.Lexer(smiLexer),
 		participle.Map(func(token lexer.Token) (lexer.Token, error) {
 			if token.EOF() {
 				return token, nil
 			}
-			token.Value = compressSpace.ReplaceAllString(strings.TrimSpace(strings.Trim(token.Value, `"`)), "\n")
+			token.Value = strings.Trim(token.Value, `"`)
+			if token.Type == smiLexer.Symbols()["Text"] {
+				token.Value = normalizeTextNewlines.ReplaceAllString(token.Value, "\n")
+			}
 			return token, nil
 		}, "ExtUTCTime", "Text"),
 		participle.Map(func(token lexer.Token) (lexer.Token, error) {

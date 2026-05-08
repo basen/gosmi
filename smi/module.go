@@ -2,6 +2,7 @@ package smi
 
 import (
 	"fmt"
+	"os"
 	"unsafe"
 
 	"github.com/sleepinggenius2/gosmi/smi/internal"
@@ -13,7 +14,7 @@ func LoadModule(module string) string {
 	checkInit()
 	modulePtr, err := internal.GetModule(module)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Fprintln(os.Stderr, err)
 	}
 	if modulePtr == nil {
 		return ""
